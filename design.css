@@ -1,245 +1,88 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-}
-
-.container {
-    width: 90vw;
-    padding: 20px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    background-image: url(bgbg.jpg);
+body{
+    background-image: url(thumb-1920-1346917.png);
     background-size: cover;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    background-color:rgb(194, 23, 23);
+    padding: 10px 0;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:#fff;
 }
 
-h1 {
-    display: none;
-    text-align: center;
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
-
-.item {
-    width: 24%;
-    margin: 0px;
+.nav-link li {
+    margin: 0;
+}
+.nav-link a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+main{
     padding: 20px;
-    flex-grow: 1;
-    transform: 0.5s ease;
-    border: 1px solid #000;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
-.item img {
+h1{
+    color: #940909;
+}
+p{
+    font-size: 18px;
+    color: #000000;
+}
+img {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    margin: 20px 0;
 }
-
-#poke1 {
-    display: none;
-    transform: 0.5s ease;
-}
-
-.item p {
-    margin-top: 5px;
-}
-
-.item span {
-    display: none;
-    margin-left: 10px;
-    position: relative;
-}
-
-#box1 {
-    background-color: rgb(177, 177, 59);
-}
-
-#box2 {
-    background-color: rgb(236, 236, 28);
-}
-
-#box3 {
-    background-color: rgb(169, 66, 201);
-}
-
-#box4 {
-    background-color: rgb(233, 138, 29);
-}
-
-#box5 {
-    background-color: rgb(37, 166, 189);
-}
-
-#box6 {
-    background-color: rgb(156, 127, 32);
-}
-
-#box7 {
-    background-color: rgb(124, 17, 212);
-}
-
-#box8 {
-    background-color: rgb(223, 134, 196);
-}
-
-#box9 {
-    background-color: rgb(235, 212, 112);
-}
-
-#box10 {
-    background-color: rgb(195, 86, 209);
-}
-
-#box11 {
-    background-color: rgb(227, 228, 183);
-}
-
-#box12 {
-    background-color: rgb(228, 225, 61);
-}
-
-@media (max-width: 700px) {
-    .item {
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        transform: 0.5s ease;
+@media(max-width: 768px){
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .item img {
-        max-width: 60px;
-    }
-
-    h1 {
-        display: inline-block;
-        flex: 1;
-        text-align: center;
-        font-size: 35px;
-        color: white;
-        text-shadow: 1px 1px 2px #000;
-        padding-top: 13px;
-    }
-
-    #poke1 {
-        display: inline-block;
-        transform: 0.5s ease;
-    }
-
-    .item:hover {
-        background-image: url(souprice.jpg);
-        background-size: cover;
-    }
-
-    .type {
-        display: none;
-        border: 1px solid #fff
-    }
-}
-
-@media (max-width: 500px) {
-    .item {
-        width: 100%;
-        display: block;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .item img {
-        max-width: 100px;
-        display: block;
-        margin: 0 auto;
-        transition: transform 0.5s ease;
-    }
-
-    .item span {
-        display: block;
+    .nav-link{
+        flex-direction: column;
+        gap: 10x;
         margin-top: 10px;
     }
-
-    .ffokiball {
-        display: none;
+    .logo{
+        font-size: 20px;
     }
-
-    #poke1 {
-        display: none;
-        transition: transform 0.5s ease;
+    main{
+        padding: 10px
     }
-
-    .item:hover {
-        .item img {
-            transform: scale(1.1);
-        }
-
-        #poke1 {
-            transform: scale(1.1);
-        }
-
-        background-image: url(sprite.png);
-        background-size: cover;
-        background-size: cover;
-        background-position: center;
-
-    }
-
-    .type {
-        display: none;
+}
+ 
+@media(max-width:480px){
+    .logo {
         font-size: 18px;
-        border: 1px solid #fff;
-        color: white;
-        text-shadow: 1px 1px 2px #000;
     }
-
-    .type.psychic {
-        background-color: #f85888;
+    h1{
+        font-size: 24px;
     }
-
-    .type.grass {
-        background-color: #78c850;
-    }
-
-    .type.poison {
-        background-color: #a040a0;
-    }
-
-    .type.bug {
-        background-color: #acce13;
-    }
-
-    .type.fire {
-        background-color: #eb741f;
-    }
-
-    .type.dragon {
-        background-color: #0e6c97;
-    }
-
-    .type.normal {
-        background-color: #a8a878;
-    }
-
-    .type.ghost {
-        background-color: #705898;
-    }
-
-    .type.fairy {
-        background-color: rgb(223, 134, 196);
-    }
-
-    .type.fighting {
-        background-color: #f3a91e;
-    }
-
-    .type.water {
-        background-color: #6890f0;
-    }
-
-    .type {
-        display: none;
+    p {
+        font-size: 16px;
     }
 }
